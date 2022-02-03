@@ -14,10 +14,8 @@ let view model dispatch =
     comp<CascadingAuthenticationState> [] [
         comp<AuthorizeView> [
             attr.fragmentWith "Authorized" <| fun (context: AuthenticationState) ->
-                printfn "Rendering Authorized"
                 div [] [text $"You're authorized! Welcome {context.User.Identity.Name}"]
             attr.fragmentWith "NotAuthorized" <| fun (_: AuthenticationState) ->
-                printfn "Rendering NotAuthorized"
                 div [] [text "You're not authorized :("]
         ] []
     ]
