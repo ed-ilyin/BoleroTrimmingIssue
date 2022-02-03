@@ -2,12 +2,9 @@
 When I do `dotnet run —project src/Client -c Release` or `Debug` (doesn’t matter) Bolero SPA works just fine.
 When I do `dotnet publish src/Client -c Release` or `Debug` (doesn’t matter) app throws:
 ```
-blazor.webassembly.js:1
-
-       crit: Microsoft.AspNetCore.Components.WebAssembly.Rendering.WebAssemblyRenderer[100]
-      Unhandled exception rendering component: Arg_NoDefCTor, Microsoft.AspNetCore.Components.Authorization.CascadingAuthenticationState
-System.MissingMethodException: Arg_NoDefCTor, Microsoft.AspNetCore.Components.Authorization.CascadingAuthenticationState
-   at System.RuntimeType.CreateInstanceMono(Boolean , Boolean )
+Uncaught (in promise) Error: Invalid JS call result type '3'.
+    at _ (blazor.webassembly.js:1:4820)
+    at blazor.webassembly.js:1:4045
 ```
 Why publishing stops app from functioning?
 ## Created using minimal SPA template
